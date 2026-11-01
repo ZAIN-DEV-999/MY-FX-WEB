@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Zain FX | Gold trading, live on the chart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head> <body>
+<nav><div class="wrap"><a class="logo" href="#top" aria-label="Zain FX home">
+<svg viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#101828" stroke="#f2b84b"/><path d="M9 10h14L9 22h14" stroke="#f2b84b" stroke-width="3" fill="none" stroke-linejoin="round"/><rect x="25" y="8" width="2" height="9" fill="#2f8cff"/></svg>Zain <b>FX</b></a>
+<div class="links"><a href="#journal">Trade journal</a><a href="#growth">Growth</a><a href="#edge">Strategy</a><a href="#calc">Lot calculator</a></div>
+<a class="btn" href="#top">Try live demo</a></div></nav>
+
+<main id="top"><div class="wrap">
+<div class="hero">
+<div><span class="pill"><i class="dot"></i>XAU/USD is moving now</span>
+<h1>Zain FX reads gold before it runs.<span>Trade it live.</span></h1>
+<p class="lead">Liquidity sweeps, FVG and support entries, tight stops. Open a demo Buy or Sell on the live chart and watch your profit move tick by tick.</p>
+<div class="cta"><a class="btn" href="#journal">See my trades</a><a class="btn ghost" href="#calc">Size my lot</a></div></div>
+<div class="term" id="term">
+<div class="thead"><b>XAU/USD · 1m</b><span class="demo">Demo</span><span>Equity <b id="eqv" class="up">5,291.14</b> USD</span></div>
+<canvas id="chart" aria-label="Live XAU/USD demo chart"></canvas>
+<div id="plist"></div>
+<div class="trade">
+<button class="tb sell" id="bs">Sell<span id="ps">0</span><small>Spread 0.24</small></button>
+<div class="lots">Lot size<div id="lots"><button>0.01</button><button class="on">0.05</button><button>0.10</button></div></div>
+<button class="tb buy" id="bb">Buy<span id="pb">0</span><small>Spread 0.24</small></button></div>
+</div></div></div>
+<div class="strip" aria-hidden="true"><div id="mq"></div></div>
+
+<div class="wrap">
+<section><div class="stats rv">
+<div class="stat"><b data-to="25.3" data-d="1">0</b><span>% demo balance growth, Oct 26 to 29</span></div>
+<div class="stat"><b data-to="5" data-d="0">0</b><span>documented XAU/USD setups</span></div>
+<div class="stat"><b data-to="0.24" data-d="2">0</b><span>spread paid on every entry</span></div>
+<div class="stat"><b data-to="5" data-d="0">0</b><span>timeframes watched, 1m to 4h</span></div></div></section>
+
+<section id="journal"><h2 class="rv">Trade journal</h2><p class="sub rv">Real screenshots from my demo account. Tap any trade to open it full size.</p>
+<div class="gal rv">
+<button class="shot"><img src="images/trade-1-oct26.jpg" alt="XAU/USD long from FVG and support"><p><b>Oct 26 · FVG and support</b>Long off the 1m zone</p></button>
+<button class="shot"><img src="images/trade-2-oct28.jpg" alt="XAU/USD short on 1m"><p><b>Oct 28 · Sell the drop</b>Short into support</p></button>
+<button class="shot"><img src="images/trade-3-oct28.jpg" alt="XAU/USD 5m range trades"><p><b>Oct 28 · Range play</b>Two clean 5m swings</p></button>
+<button class="shot"><img src="images/trade-4-oct29.jpg" alt="XAU/USD 0.01 lot scalps"><p><b>Oct 29 · Small lot scalps</b>0.01 lot, three orders</p></button>
+<button class="shot"><img src="images/trade-5-oct30.jpg" alt="XAU/USD recovery after liquidity sweep"><p><b>Oct 30 · Sweep recovery</b>+67.74 USD open P/L</p></button></div></section>
+
+<section id="growth"><h2 class="rv">Demo balance growth</h2><p class="sub rv">Balance shown in my platform screenshots. Hover a point.</p>
+<div class="eq rv" id="eq"><div id="tip">Hover a point</div>
+<svg viewBox="0 0 600 230" role="img" aria-label="Balance growth chart"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2b84b" stop-opacity=".3"/><stop offset="1" stop-color="#f2b84b" stop-opacity="0"/></linearGradient></defs>
+<path d="M50 187L210 81L390 32L550 31V215H50Z" fill="url(#g)"/>
+<path class="l" d="M50 187L210 81L390 32L550 31"/>
+<circle cx="50" cy="187" r="6" data-t="Oct 26 · 4,223.79 USD"/><circle cx="210" cy="81" r="6" data-t="Oct 28 AM · 4,948.95 USD"/><circle cx="390" cy="32" r="6" data-t="Oct 28 PM · 5,284.05 USD"/><circle cx="550" cy="31" r="6" data-t="Oct 29 · 5,291.14 USD"/>
+<text x="50" y="224" text-anchor="middle">Oct 26</text><text x="210" y="224" text-anchor="middle">Oct 28 AM</text><text x="390" y="224" text-anchor="middle">Oct 28 PM</text><text x="550" y="224" text-anchor="middle">Oct 29</text></svg></div></section>
+
+<section id="edge"><h2 class="rv">How I pick entries</h2><p class="sub rv">Three setups repeat across every screenshot above.</p>
+<div class="cards rv">
+<div class="card"><svg viewBox="0 0 200 70"><path d="M5 20 40 35 70 18 100 62 140 30 195 8" stroke="#2f8cff" fill="none" stroke-width="3"/><line x1="5" y1="58" x2="195" y2="58" stroke="#ef4444" stroke-dasharray="4"/></svg><h3>Liquidity sweep</h3><p>Wait for price to grab the stops under a low, then buy the recovery.</p></div>
+<div class="card"><svg viewBox="0 0 200 70"><rect x="60" y="30" width="40" height="22" fill="#14b87a" opacity=".6"/><path d="M5 20 55 55 80 40 120 25 195 8" stroke="#2f8cff" fill="none" stroke-width="3"/></svg><h3>FVG and support</h3><p>A fair value gap sitting on a support zone gives a tight stop and a clear target.</p></div>
+<div class="card"><svg viewBox="0 0 200 70"><rect x="5" y="8" width="190" height="16" fill="#14b87a" opacity=".5"/><rect x="5" y="48" width="190" height="16" fill="#ef4444" opacity=".4"/><path d="M5 40 50 18 90 52 140 16 195 50" stroke="#2f8cff" fill="none" stroke-width="3"/></svg><h3>Supply and demand zones</h3><p>Mark the zones on 5m, then trade the reaction between them.</p></div></div></section>
+
+<section id="calc"><h2 class="rv">Lot size calculator</h2><p class="sub rv">Gold moves $100 per $1 for 1.00 lot. Set your risk and stop distance to get the lot size.</p>
+<div class="calc rv"><div>
+<label for="cb">Balance <b id="vb">5,000 USD</b></label><input id="cb" type="range" min="100" max="20000" step="100" value="5000">
+<label for="cr">Risk per trade <b id="vr">1 %</b></label><input id="cr" type="range" min="0.25" max="5" step="0.25" value="1">
+<label for="cs">Stop loss distance <b id="vs">5 USD</b></label><input id="cs" type="range" min="1" max="30" step="0.5" value="5"></div>
+<div class="out"><span>Max lot size</span><b id="lot">0.10</b><span id="rk">You risk 50 USD on this trade.</span></div></div></section>
+</div></main>
+<footer><div class="wrap"><div class="logo">Zain <b>FX</b></div><p>All trades shown are from a demo account. Trading forex and gold carries a high risk of loss. This site is not financial advice.</p></div></footer>
+<div id="lb"><img alt="Trade screenshot"></div><div id="toast"></div>
+<script src="script.js"></script></body></html>
